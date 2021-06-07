@@ -48,7 +48,7 @@ try:
     drawry.rectangle((80, 50, 130, 100), fill = 0)
     drawry.chord((200, 50, 250, 100), 0, 360, fill = 0)
     epd.display(epd.getbuffer(HBlackimage), epd.getbuffer(HRYimage))
-    time.sleep(2)
+    time.sleep(.5)
     
     # Drawing on the Vertical image
     logging.info("2.Drawing on the Vertical image...")
@@ -69,11 +69,11 @@ try:
     drawry.rectangle((10, 150, 60, 200), fill = 0)
     drawry.chord((70, 150, 120, 200), 0, 360, fill = 0)
     epd.display(epd.getbuffer(LBlackimage), epd.getbuffer(LRYimage))
-    time.sleep(2)
+    time.sleep(.5)
     
     logging.info("3.read bmp file")
     HBlackimage = Image.open(os.path.join(picdir, '7in5b-b.bmp'))
-    HRYimage = Image.open(os.path.join(picdir, '7in5b-r.bmp'))
+    HRYimage = Image.open(os.path.join(picdir, 'topo1.bmp'))
     # HBlackimage = Image.open(os.path.join(picdir, '7in5c-b.bmp'))
     # HRYimage = Image.open(os.path.join(picdir, '7in5c-r.bmp'))
     epd.display(epd.getbuffer(HBlackimage), epd.getbuffer(HRYimage))
