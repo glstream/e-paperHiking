@@ -39,12 +39,12 @@ try:
     blackimage1.paste(newimage, (50,10))    
     epd.display(epd.getbuffer(blackimage1), epd.getbuffer(redimage1))
     
-    logging.info("Clear...")
-    epd.init()
-    epd.Clear()
+    # logging.info("Clear...")
+    # epd.init()
+    # epd.Clear()
     
-    logging.info("Goto Sleep...")
-    epd.sleep()
+    # logging.info("Goto Sleep...")
+    # epd.sleep()
         
 except IOError as e:
     logging.info(e)
