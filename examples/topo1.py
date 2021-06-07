@@ -35,7 +35,7 @@ try:
     logging.info("4.read bmp file on window")
     blackimage1 = Image.new('1', (epd.width, epd.height), 255)  # 298*126
     redimage1 = Image.new('1', (epd.width, epd.height), 255)  # 298*126    
-    newimage = Image.open(os.path.join(picdir, 'topo1.bmp'))
+    newimage = Image.open(os.path.join(picdir, 'topo_3.bmp'))
     blackimage1.paste(newimage, (50,10))    
     epd.display(epd.getbuffer(blackimage1), epd.getbuffer(redimage1))
     
